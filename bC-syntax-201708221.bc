@@ -10,16 +10,15 @@ struct TexCoord
 	v : f32;
 }
 
-
 export class TexCoordClass
 {
 	pri TexCoord;
-	pub func A : void()	//这是一个静态函数
+	pub func A : void()	// 这是一个静态函数
 	{
 		ret;
 	}
-	
-	pub func B : TexCoord&(this : TexCoord&)	//这不是一个静态函数，返回了class的数据
+
+	pub func B : TexCoord&(this : TexCoord&)	// 这不是一个静态函数，返回了class的数据
 	{
 		ret this;
 	}
@@ -29,7 +28,6 @@ func C : void(this : TexCoord&)	//增补
 {
 	
 }
-
 
 struct Vector4
 {
@@ -60,24 +58,22 @@ export func main : i32(argc : var i32,argv : string[]) 	//不写一级类型符�
 {
 	var x : i32 = 0;	//var x = 0;
 	const y : i32 = 0;	//const y = 0;	//也可以写为y = 0;\
-	
+
 	foo(main);
-	
-	
-	foo()		//函数参数最后边的Lambda表达式可以拿到函数调用外边来写
+
+	foo()		// 函数参数最后边的Lambda表达式可以拿到函数调用外边来写
 	{
 		ret 0;
 	};
-	
+
 	y = if(true)
 	{
 		ret 0;
 	};
-	
+
 	y = match(0)
 	{
 	}
-	
 
 	ret 0;
 }
