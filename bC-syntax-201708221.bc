@@ -10,104 +10,28 @@ struct TexCoord
 	v : f32;
 }
 
-export class TexCoordClass
+func foo : void
+{ f : i32() -> f(); }
+
+func main
 {
-	pri TexCoord;
-	pub func A : void()	// 这是一个静态函数
-	{
-		ret;
-	}
-
-	pub func B : TexCoord&(this : TexCoord&)	// 这不是一个静态函数，返回了class的数据
-	{
-		ret this;
-	}
-}
-
-func C : void(this : TexCoord&)	//增补
-{
-	
-}
-
-struct Vector4
-{
-	x : f32;
-	y : f32;
-	z : f32;
-	w : f32;
-}
-
-template<T>
-struct Vector<T>
-{
-	x,y,z,w : var T;
-}
-
-struct Vertex : [Vector4,TexCoord]
-{
-	color : Vector4;
-}
-
-func foo(f : func i32(var i32,const string[])) : i32
-{
-	ret f(0,null);
-}
-
-
-export func main : i32(argc : var i32,argv : string[]) 	//不写一级类型符号时默认为const
-{
-	var x : i32 = 0;	//var x = 0;
-	const y : i32 = 0;	//const y = 0;	//也可以写为y = 0;\
+	var x : i32 = 0;
+	let y : i32 = 0;
+	let tex : TexCoord = { 12.0,24.0 };
 
 	foo(main);
 
 	foo()		// 函数参数最后边的Lambda表达式可以拿到函数调用外边来写
 	{
-		ret 0;
+		0
 	};
 
 	y = if(true)
 	{
-		ret 0;
+		0
 	};
 
-	y = match(0)
-	{
-	}
-
-	ret 0;
+	0
 }
 
-//一级类型：
-//class
-//interface
-//func
-//var
-//const
-//struct
-//enum
-
-//二级类型：
-//i8
-//i16
-//i32
-//i64
-//u8
-//u16
-//u32
-//u64
-//f32
-//f64
-//bool
-
-//三级类型：
-//vector2<T>
-//vector3<T>
-//vector4<T>
-
-//特殊控制流语法：
-//if
-//match
-
-//特殊控制流函数
 
