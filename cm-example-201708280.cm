@@ -3,7 +3,7 @@ struct TexCoord
 {
 	u : f32;
 	v : f32;
-}
+} 
 
 func foo : void
 { f : i32() -> f(); }
