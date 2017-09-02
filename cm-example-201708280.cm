@@ -12,16 +12,16 @@ func main
 {
 	var x : i32 = 0;
 	let y : i32 = 0;
-	let tex : TexCoord = { 12.0,24.0 };
+	let tex : TexCoord = { 12.0, 24.0 };
 
 	foo(main);
 
-	foo()		// 函数参数最后边的Lambda表达式可以拿到函数调用外边来写
+	foo() // 函数参数最后边的Lambda表达式可以拿到函数调用外边来写
 	{
 		0
 	};
 
-	y = if(true)
+	y = if (true)
 	{
 		0
 	};
