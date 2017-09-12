@@ -10,6 +10,7 @@ Contributing to [Cm Resources](https://github.com/Cm-lang/Cm-Resources) is also 
 
 # Index
 
+[![](https://img.shields.io/badge/doc-introduction-ff69b4.svg)](./intro.md)  
 [![](https://img.shields.io/badge/doc-whitespace%20and%20keywords-ff69b4.svg)](./whitespaces-and-keywords.md)  
 [![](https://img.shields.io/badge/draft-type%20system-ff69b4.svg)](https://github.com/Cm-lang/Cm-Document/tree/draft-type-system)  
 [![](https://img.shields.io/badge/draft-constant%20and%20variable-ff69b4.svg)](https://github.com/Cm-lang/Cm-Document/tree/draft-constant-and-variable)  
