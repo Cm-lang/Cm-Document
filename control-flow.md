@@ -24,11 +24,11 @@ else {
 
 ### if 表达式
 
-当if满足以下条件时，if可作为表达式使用：
+当 if 满足以下条件时， if 可作为表达式使用：
 
-+ 拥有else
-+ if和else内的两块语句同时也是表达式
-+ if和else内的两块语句表达式返回值类型相同
++ 拥有 else
++ if 和 else 内的两块语句同时也是表达式
++ if 和 else 内的两块语句表达式返回值类型相同
 
 例子：
 
@@ -66,7 +66,7 @@ loop ::=  "loop" <语句>
 
 例子：
 
-```rust
+```scala
 loop { /* body */ }
 ```
 
@@ -74,7 +74,7 @@ loop { /* body */ }
 
 break 可以从当前循环跳出。
 
-```groovy
+```scala
 while (someBool) {
 	break;
 }
@@ -84,7 +84,7 @@ while (someBool) {
 
 continue 可以停止当前循环并且进入下一次循环。
 
-```groovy
+```scala
 while (someBool) {
   continue;
 }

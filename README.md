@@ -10,11 +10,10 @@ Contributing to [Cm Resources](https://github.com/Cm-lang/Cm-Resources) is also 
 
 # Index
 
-[![](https://img.shields.io/badge/doc-introduction-ff69b4.svg)](./intro.md)  
-[![](https://img.shields.io/badge/doc-whitespace%20and%20keywords-ff69b4.svg)](./whitespaces-and-keywords.md)  
-[![](https://img.shields.io/badge/draft-type%20system-ff69b4.svg)](https://github.com/Cm-lang/Cm-Document/tree/draft-type-system)  
-[![](https://img.shields.io/badge/draft-constant%20and%20variable-ff69b4.svg)](https://github.com/Cm-lang/Cm-Document/tree/draft-constant-and-variable)  
-[![](https://img.shields.io/badge/draft-function%20grammar-ff69b4.svg)](https://github.com/Cm-lang/Cm-Document/tree/draft-function-grammar)  
-[![](https://img.shields.io/badge/draft-control%20flow-ff69b4.svg)](https://github.com/Cm-lang/Cm-Document/tree/draft-control-flow)  
-[![](https://img.shields.io/badge/draft-control%20flow-ff69b4.svg)](https://github.com/Cm-lang/Cm-Document/tree/draft-control-flow)  
-[![](https://img.shields.io/badge/draft-struct%20type-ff69b4.svg)](https://github.com/Cm-lang/Cm-Document/tree/draft-struct-type)
+[![](https://img.shields.io/badge/chapter-introduction-ff69b4.svg)](./intro.md)  
+[![](https://img.shields.io/badge/chapter-whitespace%20and%20keywords-ff69b4.svg)](./whitespaces-and-keywords.md)  
+[![](https://img.shields.io/badge/chapter-type%20system-ff69b4.svg)](./type-system.md)  
+[![](https://img.shields.io/badge/chapter-constant%20and%20variable-ff69b4.svg)](./const-and-var.md)  
+[![](https://img.shields.io/badge/chapter-function%20grammar-ff69b4.svg)](./function.md)  
+[![](https://img.shields.io/badge/chapter-control%20flow-ff69b4.svg)](./control-flow.md)  
+[![](https://img.shields.io/badge/chapter-struct%20type-ff69b4.svg)](./struct.md)
