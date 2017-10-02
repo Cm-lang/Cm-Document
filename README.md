@@ -9,9 +9,12 @@ Issues for feature requests are welcomed (but please follow what the issue templ
 
 Contributing to [Cm Resources](https://github.com/Cm-lang/Cm-Resources) is also welcomed.
 
-<!--
 
 # Index
+
+[![](https://img.shields.io/badge/grammar-ebnf-ff69b4.svg)](Ebnf/README.md)  
+
+<!--
 
 [![](https://img.shields.io/badge/chapter-introduction-ff69b4.svg)](Zh/intro.md)  
 [![](https://img.shields.io/badge/chapter-whitespace%20and%20keywords-ff69b4.svg)](Zh/whitespaces-and-keywords.md)  

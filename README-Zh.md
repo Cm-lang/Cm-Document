@@ -11,6 +11,7 @@
 
 # 目录
 
+[![](https://img.shields.io/badge/语法-ebnf-ff69b4.svg)](Ebnf/README.md)  
 [![](https://img.shields.io/badge/章节-前言-ff69b4.svg)](Zh/intro.md)  
 [![](https://img.shields.io/badge/章节-空白与注释-ff69b4.svg)](Zh/whitespaces-and-keywords.md)  
 [![](https://img.shields.io/badge/章节-类型系统-ff69b4.svg)](Zh/type-system.md)  
