@@ -58,6 +58,10 @@ loop := "loop" <block>
 ## declaration
 
 ```ebnf
+structDeclaration := "struct" <simpleName> "{"
+                  ( <variableDeclarationEntry> <EOL> )*
+                  "}"
+
 variableDeclarationEntry := <simpleName>
                             [ ":" <type> ]
 
