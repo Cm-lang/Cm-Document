@@ -21,17 +21,17 @@ Cm 语言将会无视所有的空格、缩进、回车和换行(`\s`, `\t`, `\r`
 
 ## 保留词
 
-+ 变量修饰保留词
++ 变量修饰
 	+ const
 	+ var
 	+ let
 
-+ 类型定义保留词
++ 类型定义
 	+ func
 	+ struct
 	+ enum
 
-+ 类型一类保留词
++ 类型一类
 	+ i8
 	+ i16
 	+ i32
@@ -47,7 +47,7 @@ Cm 语言将会无视所有的空格、缩进、回车和换行(`\s`, `\t`, `\r`
 	+ nulltype
 	+ string
 
-+ 流程控制保留词
++ 流程控制
 	+ if
 	+ else
 	+ match
@@ -59,9 +59,13 @@ Cm 语言将会无视所有的空格、缩进、回车和换行(`\s`, `\t`, `\r`
 	+ times
 	+ recur
 
-+ 常量保留词
++ 常量
 	+ true
 	+ false
 	+ null
 	+ inf
 	+ nan
+
++ 模块
+	+ module
+	+ import

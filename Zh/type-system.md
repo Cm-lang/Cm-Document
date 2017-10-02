@@ -53,7 +53,7 @@
 
 Cm 中用类似这样的表达式来描述一个 lambda 的类型：
 
-```kotlin
+```rust
 string(i8, string)
 ```
 

@@ -1,31 +1,29 @@
+module CmExample;
 
-struct TexCoord
-{
+import cm.io;
+
+struct TexCoord {
 	u : f32;
 	v : f32;
 } 
 
-func foo : void
-{ f : i32() -> f(); }
+func foo : void { f : i32() -> f(); }
 
-func main
-{
+func main {
 	var x : i32 = 0;
 	let y : i32 = 0;
 	let tex : TexCoord = { 12.0, 24.0 };
 
 	foo(main);
 
-	foo() // 函数参数最后边的Lambda表达式可以拿到函数调用外边来写
-	{
+	foo() { // 函数参数最后边的 Lambda 表达式可以拿到函数调用外边来写
 		0
 	};
-
-	y = if (true)
-	{
-		0
+	let someBool = true;
+	if (someBool) {
+		y = 0
 	};
-
+	puts("Hello World\n");
 	0
 }
 
