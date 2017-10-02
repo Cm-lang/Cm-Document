@@ -40,20 +40,47 @@ simpleName ::= JavaIdentifier
             | "`" <JavaIdentifier> "`"
 
 labelName ::= ":" <simpleName>
+
+block := "{" statement* "}"
 ```
 
 ## statement
 
+```ebnf
+statement := <expression> <EOL>
+          | ??
+
+while := "while" "(" <expression> ")" <block>
+
+loop := "loop" <block>
+```
+
 ## declaration
 
 ```ebnf
-variableDeclaration := ( "let" | "var" ) <simpleName>
-                       [ ":" <type> ]
-                       [ "=" <expression> ] EOL
+variableDeclarationEntry := <simpleName>
+                            [ ":" <type> ]
+
+variableDeclaration := ( "let" | "var" )
+                       <variableDeclarationEntry>
+                       [ "=" <expression> ] <EOL>
+```
+
+## type
+
+```ebnf
+type := ??
 ```
 
 ## expression
 
 ```ebnf
 expression := ??
+
+functionLiteral := <block>
+                | "{" <variableDeclarationEntry> { "," } "->" statement* "}"
+
+forComprehension := "for" "{"
+                    (<simpleName> "<-" <expression>) { <EOL> }
+                    "}" "yield" <expression>
 ```
