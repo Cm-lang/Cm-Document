@@ -36,12 +36,12 @@ EOL ::= ";"
 
 JavaIdentifier := xxx ; TODO 帮我写一下
 
-simpleName ::= JavaIdentifier
+simpleName ::= <JavaIdentifier>
             | "`" <JavaIdentifier> "`"
 
 labelName ::= ":" <simpleName>
 
-block := "{" statement* "}"
+block := "{" <statement>* "}"
 ```
 
 ## statement
