@@ -1,6 +1,6 @@
-# Cm
+# Cm grammar
 
-# comments
+## comments
 
 ```ebnf
 multilineComment ::= '/*' multilineComment '*/'
@@ -8,7 +8,7 @@ multilineComment ::= '/*' multilineComment '*/'
 comments ::= "//" R'[^\n]*'
 ```
 
-# terminal symbols
+## basics
 
 ```ebnf
 Constants := "null"
@@ -16,6 +16,7 @@ Constants := "null"
           |  "false"
           |  "nan"
           |  "inf"
+
 BuiltInTypes := "i8"
              |  "i16"
              |  "i32"
@@ -30,5 +31,29 @@ BuiltInTypes := "i8"
              |  "bool"
              |  "nulltype"
              |  "string"
+
+EOL ::= ";"
+
+JavaIdentifier := xxx ; TODO 帮我写一下
+
+simpleName ::= JavaIdentifier
+            | "`" <JavaIdentifier> "`"
+
+labelName ::= ":" <simpleName>
 ```
 
+## statement
+
+## declaration
+
+```ebnf
+variableDeclaration := ( "let" | "var" ) <simpleName>
+                       [ ":" <type> ]
+                       [ "=" <expression> ] EOL
+```
+
+## expression
+
+```ebnf
+expression := ??
+```
