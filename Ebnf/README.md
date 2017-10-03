@@ -5,19 +5,22 @@
 ```ebnf
 multilineComment ::= '/*' multilineComment '*/'
                   | '/\*[\W\w]*?/\*'
-comments ::= "//" R'[^\n]*'
+
+Comment := "//" R'[^\n]*'
 ```
 
 ## basics
 
 ```ebnf
-Constants := "null"
+numberLiteral := R'(0[XxOoBb])?[\da-fA-F]+'
+
+Constant := "null"
           |  "true"
           |  "false"
           |  "nan"
           |  "inf"
 
-BuiltInTypes := "i8"
+BuiltInType := "i8"
              |  "i16"
              |  "i32"
              |  "i64"
@@ -34,23 +37,26 @@ BuiltInTypes := "i8"
 
 EOL ::= ";"
 
-JavaIdentifier := xxx ; TODO 帮我写一下
-
-simpleName ::= <JavaIdentifier>
-            | "`" <JavaIdentifier> "`"
+simpleName ::= <Java Identifier>
+            | "`" <Java Identifier> "`"
 
 labelName ::= ":" <simpleName>
 
 block := "{" <statement>* "}"
+
+body := <block> | <statement>
 ```
 
 ## statement
 
 ```ebnf
+if := "if" "(" <expression> ")" 
+   [ "else" <body> ]
+
 statement := <expression> <EOL>
           | ??
 
-while := "while" "(" <expression> ")" <block>
+while := "while" "(" <expression> ")" <body>
 
 loop := "loop" <block>
 ```
@@ -63,11 +69,11 @@ structDeclaration := "struct" <simpleName> "{"
                   "}"
 
 variableDeclarationEntry := <simpleName>
-                            [ ":" <type> ]
+                         [ ":" <type> ]
 
 variableDeclaration := ( "let" | "var" )
-                       <variableDeclarationEntry>
-                       [ "=" <expression> ] <EOL>
+                    <variableDeclarationEntry>
+                    [ "=" <expression> ] <EOL>
 ```
 
 ## type
@@ -85,6 +91,6 @@ functionLiteral := <block>
                 | "{" <variableDeclarationEntry> { "," } "->" statement* "}"
 
 forComprehension := "for" "{"
-                    (<simpleName> "<-" <expression>) { <EOL> }
-                    "}" "yield" <expression>
+                 (<simpleName> "<-" <expression>) { <EOL> }
+                 "}" "yield" <expression>
 ```
