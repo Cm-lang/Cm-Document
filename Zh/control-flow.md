@@ -15,8 +15,8 @@ var i = 0;
 let x = true;
 let y = false;
 
-if(x) i++;
-else if(y) i--;
+if (x) i++;
+else if (y) i--;
 else {
 	i += 2;
 }
@@ -34,11 +34,10 @@ else {
 
 ```swift
 let x = 1;
-let y = if(x > 0) 1 else x + 5;
-let z = if(x > 1) {
+let y = if (x > 0) 1 else x + 5;
+let z = if (x > 1) {
 	x + 5 > 0
-}
-else {
+} else {
 	false
 }
 ```
@@ -46,16 +45,30 @@ else {
 ### while 循环
 
 ```bnf
-<while> ::= "while" "(" <条件表达式> ")" <语句>
+<while> ::= "while" "(" <条件表达式> ")" <块>
 ```
 
 例子：
 
-```cm
-while(true)
-{
+```c
+while (true) {
 	/* body */
 }
+```
+
+### do while 循环
+
+```bnf
+<do while> ::= "do" <块> "while" "(" <条件表达式> ")" ";"
+```
+
+例子：
+
+```c
+do {
+  puts("6");
+  a = a - 1;
+} while (a > 6);
 ```
 
 ### loop 循环
