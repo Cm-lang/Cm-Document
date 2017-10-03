@@ -83,6 +83,10 @@ loop ::=  "loop" <语句>
 loop { /* body */ }
 ```
 
+### for comprehension
+
+和 Scala 一样， for comprehension 语句会被翻译为 flatMap 的连续调用
+
 ### break
 
 break 可以从当前循环跳出。
