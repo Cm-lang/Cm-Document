@@ -50,7 +50,7 @@ body := <block> | <statement>
 ## statement
 
 ```ebnf
-if := "if" "(" <expression> ")" 
+if := "if" "(" <expression> ")" <body>
    [ "else" <body> ]
 
 statement := <expression> <EOL>
@@ -58,7 +58,7 @@ statement := <expression> <EOL>
 
 while := "while" "(" <expression> ")" <body>
 
-loop := "loop" <block>
+loop := "loop" <body>
 ```
 
 ## declaration
@@ -87,10 +87,14 @@ type := ??
 ```ebnf
 expression := ??
 
+functionCall := <expression>
+             "(" <expression> { "," } ")"
+             [ <functionLiteral> ]
+
 functionLiteral := <block>
                 | "{" <variableDeclarationEntry> { "," } "->" statement* "}"
 
 forComprehension := "for" "{"
-                 (<simpleName> "<-" <expression>) { <EOL> }
+                 ( <simpleName> "<-" <expression> ) { <EOL> }
                  "}" "yield" <expression>
 ```
