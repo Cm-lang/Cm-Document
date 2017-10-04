@@ -17,8 +17,6 @@ numberLiteral := R'(0[XxOoBb])?[\da-fA-F]+'
 Constant := "null"
           |  "true"
           |  "false"
-          |  "nan"
-          |  "inf"
 
 BuiltInType := "i8"
              |  "i16"
