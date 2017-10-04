@@ -69,8 +69,6 @@ Cm 语言将会无视所有的空格、缩进、回车和换行(`\s`, `\t`, `\r`
 	+ true
 	+ false
 	+ null
-	+ inf
-	+ nan
 
 + 模块
 	+ module
