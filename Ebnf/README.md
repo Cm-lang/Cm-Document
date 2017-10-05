@@ -6,7 +6,7 @@
 multilineComment ::= '/*' multilineComment '*/'
                   | '/\*[\W\w]*?/\*'
 
-Comment := "//" R'[^\n]*'
+Comment := '//' R'[^\n]*'
 ```
 
 ## basics
@@ -14,35 +14,35 @@ Comment := "//" R'[^\n]*'
 ```ebnf
 numberLiteral := R'(0[XxOoBb])?[\da-fA-F]+'
 
-Constant := "null"
-          |  "true"
-          |  "false"
+Constant := 'null'
+          | 'true'
+          | 'false'
 
-BuiltInType := "i8"
-             |  "i16"
-             |  "i32"
-             |  "i64"
-             |  "u8"
-             |  "u16"
-             |  "u32"
-             |  "u64"
-             |  "f32"
-             |  "f64"
-             |  "void"
-             |  "bool"
-             |  "nulltype"
-             |  "string"
+BuiltInType := 'i8'
+             | 'i16'
+             | 'i32'
+             | 'i64'
+             | 'u8'
+             | 'u16'
+             | 'u32'
+             | 'u64'
+             | 'f32'
+             | 'f64'
+             | 'void'
+             | 'bool'
+             | 'nulltype'
+             | 'string'
 
-EOL ::= ";"
+EOL ::= ';'
 
 simpleName ::= <Java Identifier>
-            | "`" <Java Identifier> "`"
+            | '`' <Java Identifier> '`'
 
-labelName := "@" <simpleName>
+labelName := '@' <simpleName>
 
-labelDeclaration := <simpleName> "@"
+labelDeclaration := <simpleName> '@'
 
-block := "{" <statement>* "}"
+block := '{' <statement>* '}'
 
 body := <block> | <statement>
 ```
@@ -50,11 +50,11 @@ body := <block> | <statement>
 ## module related
 
 ```ebnf
-module := <simpleName> { "." }
+module := <simpleName> { '.' }
 
-moduleDeclaration := "module" <module> <EOL>
+moduleDeclaration := 'module' <module> <EOL>
 
-import := "import" <module> <EOL>
+import := 'import' <module> <EOL>
 ```
 
 
@@ -68,16 +68,16 @@ statement := <expression> <EOL>
 ## declaration
 
 ```ebnf
-structDeclaration := "struct" <simpleName> "{"
+structDeclaration := 'struct' <simpleName> '{'
                   ( <variableDeclarationEntry> <EOL> )*
-                  "}"
+                  '}'
 
 variableDeclarationEntry := <simpleName>
-                         [ ":" <type> ]
+                         [ ':' <type> ]
 
-variableDeclaration := ( "let" | "var" )
+variableDeclaration := ( 'let' | 'var' )
                     <variableDeclarationEntry>
-                    [ "=" <expression> ] <EOL>
+                    [ '=' <expression> ] <EOL>
 ```
 
 ## type
@@ -86,7 +86,7 @@ variableDeclaration := ( "let" | "var" )
 type := ( <lambdaType> | <simpleName> )
       [ <genericArguments> ]
 
-lambdaType := "[" <type> { "," } "=>" <type> "]"
+lambdaType := '[' <type> { ',' } '=>' <type> ']'
 ```
 
 ## expression
@@ -94,32 +94,32 @@ lambdaType := "[" <type> { "," } "=>" <type> "]"
 ```ebnf
 expression := ??
 
-while := [ <labelDeclaration> ] "while" "(" <expression> ")" <body>
+while := [ <labelDeclaration> ] 'while' '(' <expression> ')' <body>
 
-if := "if" "(" <expression> ")" <body>
-   [ "else" <body> ]
+if := 'if' '(' <expression> ')' <body>
+   [ 'else' <body> ]
 
-jump := ( "break" | "continue" ) [ <labelName> ]
+jump := ( 'break' | 'continue' ) [ <labelName> ]
 
-parameters := "(" <expression> { "," } ")"
+parameters := '(' <expression> { ',' } ')'
            [ <functionLiteral> ]
 
-genericParameters := "<" <simpleName> { "," } ">"
+genericParameters := '<' <simpleName> { ',' } '>'
 
-genericArguments := "<" <type> { "," } ">"
+genericArguments := '<' <type> { ',' } '>'
 
-methodCall := <expression> "." <simpleName> <parameters>
+methodCall := <expression> '.' <simpleName> <parameters>
 
 functionCall := <expression> <parameters>
 
 invocation := <functionCall> | <methodCall>
 
 functionLiteral := <block>
-                | [ <type> ] [ <genericParameters> ] "{" <variableDeclarationEntry> { "," } "->" statement* "}"
-                | <variableDeclarationEntry> "->" <expression>
-                | "(" <variableDeclarationEntry> { "," } ")" "->" <expression>
+                | [ <type> ] [ <genericParameters> ] '{' <variableDeclarationEntry> { ',' } '->' statement* '}'
+                | <variableDeclarationEntry> '->' <expression>
+                | '(' <variableDeclarationEntry> { ',' } ')' '->' <expression>
 
-forComprehension := "for" "{"
-                 ( <simpleName> "<-" <expression> ) { <EOL> }
-                 "}" "yield" <expression>
+forComprehension := 'for' '{'
+                 ( <simpleName> '<-' <expression> ) { <EOL> }
+                 '}' 'yield' <expression>
 ```
