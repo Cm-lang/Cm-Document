@@ -88,7 +88,9 @@ variableDeclaration := ( "let" | "var" )
 ## type
 
 ```ebnf
-type := <simpleName> | <lambdaType>
+type := <genericType>
+     | <lambdaType>
+     | <simpleName>
 
 lambdaType := <type> "(" <type> { "," } ")"
 
