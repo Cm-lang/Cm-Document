@@ -45,6 +45,17 @@ block := "{" <statement>* "}"
 body := <block> | <statement>
 ```
 
+## module related
+
+```ebnf
+module := <simpleName> { "." }
+
+moduleDeclaration := "module" <module> <EOL>
+
+import := "import" <module> <EOL>
+```
+
+
 ## statement
 
 ```ebnf
