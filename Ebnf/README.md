@@ -88,7 +88,11 @@ variableDeclaration := ( "let" | "var" )
 ## type
 
 ```ebnf
-type := ??
+type := <simpleName> | <lambdaType>
+
+lambdaType := <type> "(" <type> { "," } ")"
+
+genericType := <type> <genericArguments>
 ```
 
 ## expression
@@ -99,6 +103,10 @@ expression := ??
 parameters := "(" <expression> { "," } ")"
            [ <functionLiteral> ]
 
+genericParameters := "<" <simpleName> { "," } ">"
+
+genericArguments := "<" <type> { "," } ">"
+
 methodCall := <expression> "." <simpleName> <parameters>
 
 functionCall := <expression> <parameters>
@@ -106,7 +114,7 @@ functionCall := <expression> <parameters>
 invocation := <functionCall> | <methodCall>
 
 functionLiteral := <block>
-                | [ <type> ] [ <simpleName> { "," } ] "{" <variableDeclarationEntry> { "," } "->" statement* "}"
+                | [ <type> ] [ <genericParameters> ] "{" <variableDeclarationEntry> { "," } "->" statement* "}"
                 | <variableDeclarationEntry> "->" <expression>
                 | "(" <variableDeclarationEntry> { "," } ")" "->" <expression>
 
