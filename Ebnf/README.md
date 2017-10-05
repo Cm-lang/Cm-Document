@@ -115,7 +115,7 @@ functionCall := <expression> <parameters>
 invocation := <functionCall> | <methodCall>
 
 functionLiteral := <block>
-                | [ <type> ] [ <genericParameters> ] '{' <variableDeclarationEntry> { ',' } '->' statement* '}'
+                | [ <type> ] [ <genericParameters> ] '{' <variableDeclarationEntry> { ',' } '->' statement* [ <expression> ] '}'
                 | <variableDeclarationEntry> '->' <expression>
                 | '(' <variableDeclarationEntry> { ',' } ')' '->' <expression>
 
