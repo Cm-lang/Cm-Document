@@ -38,7 +38,7 @@ EOL ::= ";"
 simpleName ::= <Java Identifier>
             | "`" <Java Identifier> "`"
 
-labelName ::= "@" <simpleName>
+labelName := "@" <simpleName>
 
 labelDeclaration := <simpleName> "@"
 
