@@ -38,7 +38,9 @@ EOL ::= ";"
 simpleName ::= <Java Identifier>
             | "`" <Java Identifier> "`"
 
-labelName ::= ":" <simpleName>
+labelName ::= "@" <simpleName>
+
+labelDeclaration := <simpleName> "@"
 
 block := "{" <statement>* "}"
 
@@ -59,15 +61,8 @@ import := "import" <module> <EOL>
 ## statement
 
 ```ebnf
-if := "if" "(" <expression> ")" <body>
-   [ "else" <body> ]
-
 statement := <expression> <EOL>
           | ??
-
-while := "while" "(" <expression> ")" <body>
-
-loop := "loop" <body>
 ```
 
 ## declaration
@@ -88,19 +83,23 @@ variableDeclaration := ( "let" | "var" )
 ## type
 
 ```ebnf
-type := <genericType>
-     | <lambdaType>
-     | <simpleName>
+type := ( <lambdaType> | <simpleName> )
+      [ <genericArguments> ]
 
-lambdaType := <type> "(" <type> { "," } ")"
-
-genericType := <type> <genericArguments>
+lambdaType := "[" <type> { "," } "=>" <type> "]"
 ```
 
 ## expression
 
 ```ebnf
 expression := ??
+
+while := [ <labelDeclaration> ] "while" "(" <expression> ")" <body>
+
+if := "if" "(" <expression> ")" <body>
+   [ "else" <body> ]
+
+jump := ( "break" | "continue" ) [ <labelName> ]
 
 parameters := "(" <expression> { "," } ")"
            [ <functionLiteral> ]
