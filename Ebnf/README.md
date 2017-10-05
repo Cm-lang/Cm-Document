@@ -90,7 +90,9 @@ functionCall := <expression>
              [ <functionLiteral> ]
 
 functionLiteral := <block>
-                | "{" <variableDeclarationEntry> { "," } "->" statement* "}"
+                | [ <type> ] [ <simpleName> { "," } ] "{" <variableDeclarationEntry> { "," } "->" statement* "}"
+                | <variableDeclarationEntry> "->" <expression>
+                | "(" <variableDeclarationEntry> { "," } ")" "->" <expression>
 
 forComprehension := "for" "{"
                  ( <simpleName> "<-" <expression> ) { <EOL> }
