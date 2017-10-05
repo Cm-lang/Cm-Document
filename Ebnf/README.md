@@ -85,9 +85,14 @@ type := ??
 ```ebnf
 expression := ??
 
-functionCall := <expression>
-             "(" <expression> { "," } ")"
-             [ <functionLiteral> ]
+parameters := "(" <expression> { "," } ")"
+           [ <functionLiteral> ]
+
+methodCall := <expression> "." <simpleName> <parameters>
+
+functionCall := <expression> <parameters>
+
+invocation := <functionCall> | <methodCall>
 
 functionLiteral := <block>
                 | [ <type> ] [ <simpleName> { "," } ] "{" <variableDeclarationEntry> { "," } "->" statement* "}"
