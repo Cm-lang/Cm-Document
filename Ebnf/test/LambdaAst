@@ -1,0 +1,174 @@
+statements[I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[declaration[variableDeclaration['let'[let]
+                                                     
+                                                     variableDeclarationEntry[Identifier[simpleName[f]
+                                                                                         
+                                                                              ]
+                                                     ]
+                                                     '='[=]
+                                                     
+                                                     expression[LambdaDef[variableDeclarationEntry[Identifier[simpleName[s]
+                                                                                                              
+                                                                                                   ]
+                                                                          ]
+                                                                          '->'[->]
+                                                                          
+                                                                          body[block['{'[{]
+                                                                                     
+                                                                                     statements[statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[s]
+                                                                                                                                                                             
+                                                                                                                                                                  ]
+                                                                                                                                                             ]
+                                                                                                                                                    ]
+                                                                                                                                     ]
+                                                                                                                                     BinaryOperator[+]
+                                                                                                                                     
+                                                                                                                                     UnaryOperation[AtomExpr[Atom[Decimal[2]
+                                                                                                                                                                  
+                                                                                                                                                             ]
+                                                                                                                                                    ]
+                                                                                                                                     ]
+                                                                                                                     ]
+                                                                                                          ]
+                                                                                                ]
+                                                                                     ]
+                                                                                     '}'[}]
+                                                                                     
+                                                                               ]
+                                                                          ]
+                                                                ]
+                                                     ]
+                                 ]
+                     ]
+                     EOL[;]
+                     
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[expression[LambdaDef['{'[{]
+                                          
+                                          variableDeclarationEntryList[variableDeclarationEntry[Identifier[simpleName[s]
+                                                                                                           
+                                                                                                ]
+                                                                       ]
+                                                                       ','[,]
+                                                                       
+                                                                       variableDeclarationEntry[Identifier[simpleName[g]
+                                                                                                           
+                                                                                                ]
+                                                                       ]
+                                          ]
+                                          '->'[->]
+                                          
+                                          statements[I[NEWLINE[NEWLINE]
+                                                       
+                                                     ]
+                                                     statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[s]
+                                                                                                                                  
+                                                                                                                       ]
+                                                                                                                  ]
+                                                                                                         ]
+                                                                                          ]
+                                                                                          BinaryOperator[+]
+                                                                                          
+                                                                                          UnaryOperation[AtomExpr[Atom[Identifier[simpleName[g]
+                                                                                                                                  
+                                                                                                                       ]
+                                                                                                                  ]
+                                                                                                         ]
+                                                                                          ]
+                                                                          ]
+                                                               ]
+                                                     ]
+                                          ]
+                                          '}'[}]
+                                          
+                                ]
+                     ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[expression[LambdaDef['{'[{]
+                                          
+                                          statements[statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[i]
+                                                                                                                                  
+                                                                                                                       ]
+                                                                                                                  ]
+                                                                                                         ]
+                                                                                          ]
+                                                                                          BinaryOperator[+]
+                                                                                          
+                                                                                          UnaryOperation[AtomExpr[Atom[Identifier[simpleName[j]
+                                                                                                                                  
+                                                                                                                       ]
+                                                                                                                  ]
+                                                                                                         ]
+                                                                                          ]
+                                                                          ]
+                                                               ]
+                                                     ]
+                                          ]
+                                          '}'[}]
+                                          
+                                          ':'[:]
+                                          
+                                          Type['['[[]
+                                               
+                                               '=>'[=>]
+                                               
+                                               Type[Identifier[simpleName[i32]
+                                                               
+                                                    ]
+                                               ]
+                                               ']'[]]
+                                               
+                                          ]
+                                ]
+                     ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[expression[LambdaDef[variableDeclarationEntry[Identifier[simpleName[x]
+                                                                              
+                                                                   ]
+                                                                   ':'[:]
+                                                                   
+                                                                   Type[Identifier[simpleName[i32]
+                                                                                   
+                                                                        ]
+                                                                   ]
+                                          ]
+                                          '->'[->]
+                                          
+                                          body[statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[x]
+                                                                                                                            
+                                                                                                                 ]
+                                                                                                            ]
+                                                                                                   ]
+                                                                                    ]
+                                                                                    BinaryOperator[+]
+                                                                                    
+                                                                                    UnaryOperation[AtomExpr[Atom[Decimal[1]
+                                                                                                                 
+                                                                                                            ]
+                                                                                                   ]
+                                                                                    ]
+                                                                    ]
+                                                         ]
+                                               ]
+                                          ]
+                                ]
+                     ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+]

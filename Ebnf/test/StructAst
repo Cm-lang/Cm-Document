@@ -1,0 +1,65 @@
+statements[I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[declaration[structDeclaration['struct'[struct]
+                                                   
+                                                   Identifier[simpleName[Ice]
+                                                              
+                                                   ]
+                                                   '{'[{]
+                                                   
+                                                   I[NEWLINE[NEWLINE]
+                                                     
+                                                   ]
+                                                   variableDeclarationEntry[Identifier[simpleName[glova1]
+                                                                                       
+                                                                            ]
+                                                                            ':'[:]
+                                                                            
+                                                                            Type[Identifier[simpleName[MTF]
+                                                                                            
+                                                                                 ]
+                                                                            ]
+                                                   ]
+                                                   I[NEWLINE[NEWLINE]
+                                                     
+                                                   ]
+                                                   variableDeclarationEntry[Identifier[simpleName[glova2]
+                                                                                       
+                                                                            ]
+                                                                            ':'[:]
+                                                                            
+                                                                            Type[Identifier[simpleName[MTF]
+                                                                                            
+                                                                                 ]
+                                                                            ]
+                                                   ]
+                                                   I[NEWLINE[NEWLINE]
+                                                     
+                                                   ]
+                                                   variableDeclarationEntry[Identifier[simpleName[dd]
+                                                                                       
+                                                                            ]
+                                                                            ':'[:]
+                                                                            
+                                                                            Type[Identifier[simpleName[MTF]
+                                                                                            
+                                                                                 ]
+                                                                            ]
+                                                   ]
+                                                   ','[,]
+                                                   
+                                                   I[NEWLINE[NEWLINE]
+                                                     
+                                                   ]
+                                                   '}'[}]
+                                                   
+                                 ]
+                     ]
+                     EOL[;]
+                     
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+]

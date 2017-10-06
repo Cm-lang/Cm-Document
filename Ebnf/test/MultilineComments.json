@@ -1,0 +1,412 @@
+{
+    "name": "statements",
+    "value": [
+        {
+            "name": "I",
+            "value": [
+                {
+                    "name": "NEWLINE",
+                    "value": "\n",
+                    "meta": {
+                        "rowIdx": 1,
+                        "hasParsed": 1,
+                        "fileName": "<input>"
+                    }
+                }
+            ],
+            "meta": {
+                "rowIdx": 0,
+                "hasParsed": 0,
+                "fileName": "<input>"
+            }
+        },
+        {
+            "name": "I",
+            "value": [
+                {
+                    "name": "multilineComment",
+                    "value": [
+                        {
+                            "name": "'/*'",
+                            "value": "/*",
+                            "meta": {
+                                "rowIdx": 1,
+                                "hasParsed": 2,
+                                "fileName": "<input>"
+                            }
+                        },
+                        {
+                            "name": "NEWLINE",
+                            "value": "\n",
+                            "meta": {
+                                "rowIdx": 2,
+                                "hasParsed": 3,
+                                "fileName": "<input>"
+                            }
+                        },
+                        {
+                            "name": "multilineComment",
+                            "value": [
+                                {
+                                    "name": "'/*'",
+                                    "value": "/*",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 4,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "var",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 5,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "f",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 6,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": ":",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 7,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "auto",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 8,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "=",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 9,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "(",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 10,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "i",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 11,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": ":",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 12,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "i32",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 13,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": ",",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 14,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "inner",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 15,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": ":",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 16,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "[",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 17,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "i32",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 18,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "=>",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 19,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "i32",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 20,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "]",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 21,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": ")",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 22,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "->",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 23,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "{",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 24,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "inner",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 25,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "(",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 26,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "i",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 27,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": ")",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 28,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "}",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 29,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": ";",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 30,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "'*/'",
+                                    "value": "*/",
+                                    "meta": {
+                                        "rowIdx": 2,
+                                        "hasParsed": 31,
+                                        "fileName": "<input>"
+                                    }
+                                }
+                            ],
+                            "meta": {
+                                "rowIdx": 2,
+                                "hasParsed": 3,
+                                "fileName": "<input>"
+                            }
+                        },
+                        {
+                            "name": "NEWLINE",
+                            "value": "\n",
+                            "meta": {
+                                "rowIdx": 3,
+                                "hasParsed": 32,
+                                "fileName": "<input>"
+                            }
+                        },
+                        {
+                            "name": "multilineComment",
+                            "value": [
+                                {
+                                    "name": "'/*'",
+                                    "value": "/*",
+                                    "meta": {
+                                        "rowIdx": 3,
+                                        "hasParsed": 33,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "Any",
+                                    "value": "sss",
+                                    "meta": {
+                                        "rowIdx": 3,
+                                        "hasParsed": 34,
+                                        "fileName": "<input>"
+                                    }
+                                },
+                                {
+                                    "name": "'*/'",
+                                    "value": "*/",
+                                    "meta": {
+                                        "rowIdx": 3,
+                                        "hasParsed": 35,
+                                        "fileName": "<input>"
+                                    }
+                                }
+                            ],
+                            "meta": {
+                                "rowIdx": 3,
+                                "hasParsed": 32,
+                                "fileName": "<input>"
+                            }
+                        },
+                        {
+                            "name": "NEWLINE",
+                            "value": "\n",
+                            "meta": {
+                                "rowIdx": 4,
+                                "hasParsed": 36,
+                                "fileName": "<input>"
+                            }
+                        },
+                        {
+                            "name": "'*/'",
+                            "value": "*/",
+                            "meta": {
+                                "rowIdx": 4,
+                                "hasParsed": 37,
+                                "fileName": "<input>"
+                            }
+                        }
+                    ],
+                    "meta": {
+                        "rowIdx": 1,
+                        "hasParsed": 1,
+                        "fileName": "<input>"
+                    }
+                }
+            ],
+            "meta": {
+                "rowIdx": 1,
+                "hasParsed": 1,
+                "fileName": "<input>"
+            }
+        },
+        {
+            "name": "I",
+            "value": [
+                {
+                    "name": "NEWLINE",
+                    "value": "\n",
+                    "meta": {
+                        "rowIdx": 5,
+                        "hasParsed": 38,
+                        "fileName": "<input>"
+                    }
+                }
+            ],
+            "meta": {
+                "rowIdx": 4,
+                "hasParsed": 37,
+                "fileName": "<input>"
+            }
+        }
+    ],
+    "meta": {
+        "rowIdx": 0,
+        "hasParsed": 0,
+        "fileName": "<input>"
+    }
+}

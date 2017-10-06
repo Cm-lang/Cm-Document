@@ -1,0 +1,317 @@
+statements[I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[expression[LambdaDef['('[(]
+                                          
+                                          variableDeclarationEntryList[variableDeclarationEntry[Identifier[simpleName[x]
+                                                                                                           
+                                                                                                ]
+                                                                                                ':'[:]
+                                                                                                
+                                                                                                Type[Identifier[simpleName[i32]
+                                                                                                                
+                                                                                                     ]
+                                                                                                ]
+                                                                       ]
+                                                                       ','[,]
+                                                                       
+                                                                       variableDeclarationEntry[Identifier[simpleName[y]
+                                                                                                           
+                                                                                                ]
+                                                                                                ':'[:]
+                                                                                                
+                                                                                                Type[Identifier[simpleName[i8]
+                                                                                                                
+                                                                                                     ]
+                                                                                                ]
+                                                                       ]
+                                          ]
+                                          ')'[)]
+                                          
+                                          '=>'[=>]
+                                          
+                                          Type[Identifier[simpleName[i32]
+                                                          
+                                               ]
+                                          ]
+                                          '->'[->]
+                                          
+                                          body[statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[x]
+                                                                                                                            
+                                                                                                                 ]
+                                                                                                            ]
+                                                                                                   ]
+                                                                                    ]
+                                                                                    BinaryOperator[+]
+                                                                                    
+                                                                                    UnaryOperation[AtomExpr[Atom[Identifier[simpleName[y]
+                                                                                                                            
+                                                                                                                 ]
+                                                                                                            ]
+                                                                                                   ]
+                                                                                    ]
+                                                                    ]
+                                                         ]
+                                               ]
+                                          ]
+                                ]
+                     ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[expression[LambdaDef[genericParameters['<'[<]
+                                                            
+                                                            Identifier[simpleName[T]
+                                                                       
+                                                            ]
+                                                            '>'[>]
+                                                            
+                                          ]
+                                          LambdaDef['('[(]
+                                                    
+                                                    variableDeclarationEntryList[variableDeclarationEntry[Identifier[simpleName[x]
+                                                                                                                     
+                                                                                                          ]
+                                                                                                          ':'[:]
+                                                                                                          
+                                                                                                          Type[Identifier[simpleName[i32]
+                                                                                                                          
+                                                                                                               ]
+                                                                                                          ]
+                                                                                 ]
+                                                                                 ','[,]
+                                                                                 
+                                                                                 variableDeclarationEntry[Identifier[simpleName[y]
+                                                                                                                     
+                                                                                                          ]
+                                                                                                          ':'[:]
+                                                                                                          
+                                                                                                          Type[Identifier[simpleName[i8]
+                                                                                                                          
+                                                                                                               ]
+                                                                                                          ]
+                                                                                 ]
+                                                    ]
+                                                    ')'[)]
+                                                    
+                                                    ':'[:]
+                                                    
+                                                    Type['['[[]
+                                                         
+                                                         TypeList[Type[Identifier[simpleName[i32]
+                                                                                  
+                                                                       ]
+                                                                  ]
+                                                                  ','[,]
+                                                                  
+                                                                  Type[Identifier[simpleName[i8]
+                                                                                  
+                                                                       ]
+                                                                  ]
+                                                         ]
+                                                         '=>'[=>]
+                                                         
+                                                         Type[Identifier[simpleName[i32]
+                                                                         
+                                                              ]
+                                                         ]
+                                                         ']'[]]
+                                                         
+                                                    ]
+                                                    '->'[->]
+                                                    
+                                                    body[statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[x]
+                                                                                                                                      
+                                                                                                                           ]
+                                                                                                                      ]
+                                                                                                             ]
+                                                                                              ]
+                                                                                              BinaryOperator[+]
+                                                                                              
+                                                                                              UnaryOperation[AtomExpr[Atom[Identifier[simpleName[y]
+                                                                                                                                      
+                                                                                                                           ]
+                                                                                                                      ]
+                                                                                                             ]
+                                                                                              ]
+                                                                              ]
+                                                                   ]
+                                                         ]
+                                                    ]
+                                          ]
+                                ]
+                     ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[expression[LambdaDef[genericParameters['<'[<]
+                                                            
+                                                            Identifier[simpleName[T]
+                                                                       
+                                                            ]
+                                                            ','[,]
+                                                            
+                                                            Identifier[simpleName[G]
+                                                                       
+                                                            ]
+                                                            '>'[>]
+                                                            
+                                          ]
+                                          LambdaDef['{'[{]
+                                                    
+                                                    variableDeclarationEntryList[I[NEWLINE[NEWLINE]
+                                                                                   
+                                                                                 ]
+                                                                                 variableDeclarationEntry[Identifier[simpleName[x]
+                                                                                                                     
+                                                                                                          ]
+                                                                                                          ':'[:]
+                                                                                                          
+                                                                                                          Type[Identifier[simpleName[i32]
+                                                                                                                          
+                                                                                                               ]
+                                                                                                          ]
+                                                                                 ]
+                                                                                 ','[,]
+                                                                                 
+                                                                                 variableDeclarationEntry[Identifier[simpleName[y]
+                                                                                                                     
+                                                                                                          ]
+                                                                                                          ':'[:]
+                                                                                                          
+                                                                                                          Type[Identifier[simpleName[i8]
+                                                                                                                          
+                                                                                                               ]
+                                                                                                          ]
+                                                                                 ]
+                                                    ]
+                                                    '=>'[=>]
+                                                    
+                                                    Type[Identifier[simpleName[i32]
+                                                                    
+                                                         ]
+                                                    ]
+                                                    '->'[->]
+                                                    
+                                                    statements[I[NEWLINE[NEWLINE]
+                                                                 
+                                                               ]
+                                                               statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[x]
+                                                                                                                                            
+                                                                                                                                 ]
+                                                                                                                            ]
+                                                                                                                   ]
+                                                                                                    ]
+                                                                                                    BinaryOperator[+]
+                                                                                                    
+                                                                                                    UnaryOperation[AtomExpr[Atom[Identifier[simpleName[y]
+                                                                                                                                            
+                                                                                                                                 ]
+                                                                                                                            ]
+                                                                                                                   ]
+                                                                                                    ]
+                                                                                    ]
+                                                                         ]
+                                                               ]
+                                                               I[NEWLINE[NEWLINE]
+                                                                 
+                                                               ]
+                                                    ]
+                                                    '}'[}]
+                                                    
+                                          ]
+                                ]
+                     ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[expression[LambdaDef['{'[{]
+                                          
+                                          variableDeclarationEntryList[I[NEWLINE[NEWLINE]
+                                                                         
+                                                                       ]
+                                                                       variableDeclarationEntry[Identifier[simpleName[x]
+                                                                                                           
+                                                                                                ]
+                                                                                                ':'[:]
+                                                                                                
+                                                                                                Type[Identifier[simpleName[i32]
+                                                                                                                
+                                                                                                     ]
+                                                                                                ]
+                                                                       ]
+                                                                       ','[,]
+                                                                       
+                                                                       variableDeclarationEntry[Identifier[simpleName[y]
+                                                                                                           
+                                                                                                ]
+                                                                                                ':'[:]
+                                                                                                
+                                                                                                Type[Identifier[simpleName[i8]
+                                                                                                                
+                                                                                                     ]
+                                                                                                ]
+                                                                       ]
+                                          ]
+                                          ':'[:]
+                                          
+                                          Type['['[[]
+                                               
+                                               TypeList[Type[Identifier[simpleName[i32]
+                                                                        
+                                                             ]
+                                                        ]
+                                                        ','[,]
+                                                        
+                                                        Type[Identifier[simpleName[i8]
+                                                                        
+                                                             ]
+                                                        ]
+                                               ]
+                                               '=>'[=>]
+                                               
+                                               Type[Identifier[simpleName[i32]
+                                                               
+                                                    ]
+                                               ]
+                                               ']'[]]
+                                               
+                                          ]
+                                          '->'[->]
+                                          
+                                          statements[I[NEWLINE[NEWLINE]
+                                                       
+                                                     ]
+                                                     statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[x]
+                                                                                                                                  
+                                                                                                                       ]
+                                                                                                                  ]
+                                                                                                         ]
+                                                                                          ]
+                                                                                          BinaryOperator[+]
+                                                                                          
+                                                                                          UnaryOperation[AtomExpr[Atom[Identifier[simpleName[y]
+                                                                                                                                  
+                                                                                                                       ]
+                                                                                                                  ]
+                                                                                                         ]
+                                                                                          ]
+                                                                          ]
+                                                               ]
+                                                     ]
+                                                     I[NEWLINE[NEWLINE]
+                                                       
+                                                     ]
+                                          ]
+                                          '}'[}]
+                                          
+                                ]
+                     ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+]

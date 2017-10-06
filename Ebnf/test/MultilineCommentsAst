@@ -1,0 +1,83 @@
+statements[I[NEWLINE[NEWLINE]
+             
+           ]
+           I[multilineComment['/*'[/*]
+                              
+                              NEWLINE[NEWLINE]
+                              
+                              multilineComment['/*'[/*]
+                                               
+                                               Any[var]
+                                               
+                                               Any[f]
+                                               
+                                               Any[:]
+                                               
+                                               Any[auto]
+                                               
+                                               Any[=]
+                                               
+                                               Any[(]
+                                               
+                                               Any[i]
+                                               
+                                               Any[:]
+                                               
+                                               Any[i32]
+                                               
+                                               Any[,]
+                                               
+                                               Any[inner]
+                                               
+                                               Any[:]
+                                               
+                                               Any[[]
+                                               
+                                               Any[i32]
+                                               
+                                               Any[=>]
+                                               
+                                               Any[i32]
+                                               
+                                               Any[]]
+                                               
+                                               Any[)]
+                                               
+                                               Any[->]
+                                               
+                                               Any[{]
+                                               
+                                               Any[inner]
+                                               
+                                               Any[(]
+                                               
+                                               Any[i]
+                                               
+                                               Any[)]
+                                               
+                                               Any[}]
+                                               
+                                               Any[;]
+                                               
+                                               '*/'[*/]
+                                               
+                              ]
+                              NEWLINE[NEWLINE]
+                              
+                              multilineComment['/*'[/*]
+                                               
+                                               Any[sss]
+                                               
+                                               '*/'[*/]
+                                               
+                              ]
+                              NEWLINE[NEWLINE]
+                              
+                              '*/'[*/]
+                              
+             ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+]
