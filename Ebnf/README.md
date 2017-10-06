@@ -4,14 +4,14 @@
 
 ```ebnf
 
-Any := K'^((?!/\*|\*/|\n)[\s\S])*$'
+Any     := K'^((?!/\*|\*/|\n)[\s\S])*$'
 
 multilineComment
         ::= '/*' (Any | NEWLINE | multilineComment)* '*/'
         
 
-Comment:= R'//[^\n]*'  
-       
+Comment := R'//[^\n]*'
+    
 ```
 
 ## basics
@@ -38,8 +38,7 @@ EOL     := R';'
         
 
 
-I
-        ::=  NEWLINE | Comment | multilineComment
+I       ::=  NEWLINE | Comment | multilineComment
         
 
 simpleName       

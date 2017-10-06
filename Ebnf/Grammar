@@ -34,8 +34,7 @@ EOL     := R';'
         ENDL
 
 
-I
-        ::=  NEWLINE | Comment | multilineComment
+I       ::=  NEWLINE | Comment | multilineComment
         ENDL
 
 simpleName       
