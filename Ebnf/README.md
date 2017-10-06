@@ -3,39 +3,43 @@
 ## comments
 
 ```ebnf
-multilineComment  
-        ::= '/*' multilineComment '*/' 
-            |  
-            R'/\*[\W\w]*?/\*' 
 
-Comment:= R'//[^\n]*'
+Any := K'^((?!/\*|\*/|\n)[\s\S])*$'
+
+multilineComment
+        ::= '/*' (Any | NEWLINE | multilineComment)* '*/'
+        
+
+Comment:= R'//[^\n]*'  
+       
 ```
 
 ## basics
 
 ```ebnf
-String  := R'[a-z]*"[\w|\W]*"' 
+String  := R'[a-z]*"[\w|\W]*"'
         
 
 numberLiteral 
-        := R'0[XxOoBb][\da-fA-F]+'  
+        := R'0[XxOoBb][\da-fA-F]+'
         
 
-Decimal := R'\d+(?:\.\d+|)(?:E\-{0,1}\d+|)' 
+Decimal := R'\d+(?:\.\d+|)(?:E\-{0,1}\d+|)'
         
 
-Constant:= K'null|false|true' 
+Constant:= K'null|false|true'
         
 
 NEWLINE := R'\n'
         
 
 
-EOL     := R';' 
+EOL     := R';'
         
 
-Insertable
-        ::= EOL | NEWLINE | Comment | multilineComment
+
+I
+        ::=  NEWLINE | Comment | multilineComment
         
 
 simpleName       
@@ -50,25 +54,24 @@ labelDeclaration
         ::= ':' Identifier
         
 
-block   ::= '{' statements '}' 
+block   ::= '{' statements '}'
         
 
-body    ::=  block  | statement | Insertable* body Insertable*
+body    ::=  block  | statement
         
-
-
 
 ```
 
 ## module related
 
 ```ebnf
-module  ::= simpleName (',' simpleName)* 
+module  ::= simpleName (',' simpleName)*
         
-moduleDeclaration 
-        ::= 'module' module 
+moduleDeclaration
+        ::= 'module' module
         
 Import  ::= 'import' module
+        
         
 ```
 
@@ -77,15 +80,19 @@ Import  ::= 'import' module
 
 ```ebnf
 
-statements Throw Insertable
-        ::= (Insertable* statement* Insertable*)*
+statements Throw I
+        ::= (I* statement* I*)*
         
 
-statement 
-        ::= flowControl | declaration | flowControlSign [Identifier] | expression  
-         
+statement
+        ::= ( flowControl  |
+              declaration  |
+              flowControlSign [Identifier] |
+              expression
+            ) [EOL]
+        
 
-flowControlSign 
+flowControlSign
         := K'break|return|continue'
         
 
@@ -93,17 +100,18 @@ flowControl
         ::= If | While
         
 
-If      ::= K'if' '(' expression ')' 
-                body 
+If      ::= K'if' '(' expression ')'
+                body
             [
-            K'else' 
-                body 
-            ] 
+            K'else'
+                body
+            ]
         
 
-While   ::=  [labelDeclaration] 
-             K'while' '(' expression  ')' 
+While   ::=  [labelDeclaration]
+             K'while' '(' expression  ')'
                 body
+        
         
 
 ```
@@ -112,26 +120,34 @@ While   ::=  [labelDeclaration]
 
 ```ebnf
 
-declaration 
-        ::= structDeclaration | variableDeclaration
+declaration
+        ::= structDeclaration | moduleDeclaration | Import | variableDeclaration
         
 
-structDeclaration Throw Insertable
-        ::= K'struct' Identifier '{' 
-                (Insertable* variableDeclarationEntry Insertable*)* 
-            '}' 
+structDeclaration Throw I
+        ::= K'struct' Identifier '{'
+                (I* variableDeclarationEntry [','] I*)*
+            '}'
         
 
 variableDeclarationEntry
         ::= Identifier [':' Type]
         
 
-variableDeclarationEntryList  
-        ::= variableDeclarationEntry (',' variableDeclarationEntry)* 
+
+variableDeclarationEntryList Throw I
+        ::= I* variableDeclarationEntry
+                (I* ','
+                 I* variableDeclarationEntry)*
+                 I*
         
 
-variableDeclaration
-        ::= (K'let' | K'var') variableDeclarationEntry [ '=' expression ] 
+variableDeclaration Throw I
+        ::= (K'let' | K'var') variableDeclarationEntry [ '=' I* expression ]
+        
+
+genericParameters
+        ::= K'<' Identifier (',' Identifier)* K'>'
         
 
 ```
@@ -139,11 +155,12 @@ variableDeclaration
 ## type
 
 ```ebnf
-Type    ::=  '[' TypeList '=>' Type ']' | Identifier
+Type    ::=  '[' [TypeList] '=>' Type ']' | Identifier
         
 
 TypeList
         ::= Type (',' Type)*
+        
         
 
 genericParameters 
@@ -154,45 +171,58 @@ genericParameters
 ## expression
 
 ```ebnf
-BinaryOperator ::= R'\/\/|\/|\|\||\||\>\>|\<\<|\>\=|\<\=|\<\-|\>|\<|\=\>|\-\-|\+\+|\*\*|\+|\-|\*|\=\=|\=|\%|\^'
+BinaryOperator := R'\/\/|\/|\|\||\||\>\>|\<\<|\>\=|\<\=|\<\-|\>|\<|\=\>|\-\-|\+\+|\*\*|\+|\-|\*|\=\=|\=|\%|\^'
                 
-UnaryOperator  := R'\?|\!|\&|\$|\@|\+|\-|\~' 
+UnaryOperator  := R'\?|\!|\&|\$|\@|\+|\-|\~'
                 
 
-expression     
+expression
         ::= LambdaDef | BinaryOperation
         
 
-LambdaDef Throw Insertable     
+LambdaDef Throw I     
         ::= variableDeclarationEntry '->' body
             |
-            '(' variableDeclarationEntryList ')' '->' body
+            '(' variableDeclarationEntryList ')' [':' Type | '=>' Type ] '->' body
             |
-            '{' Insertable*
-                [variableDeclarationEntryList '->']
+            '{' [variableDeclarationEntryList [':' Type | '=>' Type] '->']
                 statements              # 若没有定义形式参数, 则类似kotlin的`it`或者scala的`_`
-            '}' 
-            | [genericParameters] [Type] LambdaDef
+            '}' [':' Type]
+            | [genericParameters] LambdaDef
         
 
-BinaryOperation 
-        ::= UnaryOperation (BinaryOperator UnaryOperation)* 
+BinaryOperation
+        ::= UnaryOperation (BinaryOperator UnaryOperation)*
         
 
 UnaryOperation
-        ::= AtomExpr | UnaryOperator UnaryOperation 
+        ::= AtomExpr | UnaryOperator UnaryOperation
         
 
 AtomExpr::= Atom Trailer*
         
 
-expressionList 
-        ::= expression (',' expression)*
+expressionList Throw I
+        ::= I* expression
+                (I* ','
+                 I* expression)*
+                 I*
         
+        
+
+Trailer ::=  Call | Access
+        
+
+Call Throw I
+        ::= '(' [expressionList] ')' I*
+            [LambdaDef]
+        
+Access Throw I
+        ::= I* '.' Identifier
+        
+
 
 Atom    ::= Constant | String | Identifier | numberLiteral | Decimal | '(' expression ')'
         
-
-Trailer ::= '(' [expressionList] ')' [LambdaDef] | '.' Identifier
         
 ```

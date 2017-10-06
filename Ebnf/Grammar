@@ -61,25 +61,25 @@ body    ::=  block  | statement
 # module related
 
 
-module  ::= simpleName (',' simpleName)* 
+module  ::= simpleName (',' simpleName)*
         ENDL
-moduleDeclaration 
-        ::= 'module' module 
+moduleDeclaration
+        ::= 'module' module
         ENDL
 Import  ::= 'import' module
         ENDL
 
 # statement 
 
-statement 
-        ::= ( flowControl  | 
-              declaration  | 
+statement
+        ::= ( flowControl  |
+              declaration  |
               flowControlSign [Identifier] |
-              expression  
+              expression
             ) [EOL]
-        ENDL 
+        ENDL
 
-flowControlSign 
+flowControlSign
         := K'break|return|continue'
         ENDL
 
@@ -87,29 +87,29 @@ flowControl
         ::= If | While
         ENDL
 
-If      ::= K'if' '(' expression ')' 
-                body 
+If      ::= K'if' '(' expression ')'
+                body
             [
-            K'else' 
-                body 
-            ] 
+            K'else'
+                body
+            ]
         ENDL
 
-While   ::=  [labelDeclaration] 
-             K'while' '(' expression  ')' 
+While   ::=  [labelDeclaration]
+             K'while' '(' expression  ')'
                 body
         ENDL
 
 # declaration
 
-declaration 
-        ::= structDeclaration | moduleDeclaration | Import | variableDeclaration 
+declaration
+        ::= structDeclaration | moduleDeclaration | Import | variableDeclaration
         ENDL
 
 structDeclaration # Throw I
-        ::= K'struct' Identifier '{' 
-                (I* variableDeclarationEntry [','] I*)* 
-            '}' 
+        ::= K'struct' Identifier '{'
+                (I* variableDeclarationEntry [','] I*)*
+            '}'
         ENDL
 
 variableDeclarationEntry
@@ -118,14 +118,14 @@ variableDeclarationEntry
 
 
 variableDeclarationEntryList # Throw I
-        ::= I* variableDeclarationEntry 
-                (I* ',' 
-                 I* variableDeclarationEntry)* 
+        ::= I* variableDeclarationEntry
+                (I* ','
+                 I* variableDeclarationEntry)*
                  I*
         ENDL
 
 variableDeclaration # Throw I
-        ::= (K'let' | K'var') variableDeclarationEntry [ '=' I* expression ] 
+        ::= (K'let' | K'var') variableDeclarationEntry [ '=' I* expression ]
         ENDL
 
 Type    ::=  '[' [TypeList] '=>' Type ']' | Identifier
@@ -135,7 +135,7 @@ TypeList
         ::= Type (',' Type)*
         ENDL
 
-genericParameters 
+genericParameters
         ::= K'<' Identifier (',' Identifier)* K'>'
         ENDL
 
@@ -143,10 +143,10 @@ genericParameters
 
 BinaryOperator := R'\/\/|\/|\|\||\||\>\>|\<\<|\>\=|\<\=|\<\-|\>|\<|\=\>|\-\-|\+\+|\*\*|\+|\-|\*|\=\=|\=|\%|\^'
                 ENDL
-UnaryOperator  := R'\?|\!|\&|\$|\@|\+|\-|\~' 
+UnaryOperator  := R'\?|\!|\&|\$|\@|\+|\-|\~'
                 ENDL
 
-expression     
+expression
         ::= LambdaDef | BinaryOperation
         ENDL
 
@@ -161,21 +161,21 @@ LambdaDef # Throw I
             | [genericParameters] LambdaDef
         ENDL
 
-BinaryOperation 
-        ::= UnaryOperation (BinaryOperator UnaryOperation)* 
+BinaryOperation
+        ::= UnaryOperation (BinaryOperator UnaryOperation)*
         ENDL
 
 UnaryOperation
-        ::= AtomExpr | UnaryOperator UnaryOperation 
+        ::= AtomExpr | UnaryOperator UnaryOperation
         ENDL
 
 AtomExpr::= Atom Trailer*
         ENDL
 
 expressionList # Throw I
-        ::= I* expression 
-                (I* ',' 
-                 I* expression)* 
+        ::= I* expression
+                (I* ','
+                 I* expression)*
                  I*
         ENDL
 
@@ -183,9 +183,9 @@ expressionList # Throw I
 
 
 
-Trailer ::=  Call | Access 
+Trailer ::=  Call | Access
         ENDL
-Call # Throw I   
+Call # Throw I
         ::= '(' [expressionList] ')' I*
             [LambdaDef]
         ENDL
