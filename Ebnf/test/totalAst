@@ -203,15 +203,15 @@ statements[I[NEWLINE[NEWLINE]
                                                                                                                                                                ]
                                                                                                                                                                ')'[)]
                                                                                                                                                                
-                                                                                                                                                               I[NEWLINE[NEWLINE]
-                                                                                                                                                                 
-                                                                                                                                                               ]
                                                                                                                                                           ]
                                                                                                                                                   ]
                                                                                                                                          ]
                                                                                                                           ]
                                                                                                           ]
                                                                                                ]
+                                                                                     ]
+                                                                                     I[NEWLINE[NEWLINE]
+                                                                                       
                                                                                      ]
                                                                           ]
                                                                           '}'[}]
@@ -528,13 +528,13 @@ statements[I[NEWLINE[NEWLINE]
                                                                                                ]
                                                                                                '}'[}]
                                                                                                
+                                                                                               Trailer[Call['('[(]
+                                                                                                            
+                                                                                                            ')'[)]
+                                                                                                            
+                                                                                                       ]
+                                                                                               ]
                                                                                      ]
-                                                                                ]
-                                                                        ]
-                                                                        Trailer[Call['('[(]
-                                                                                     
-                                                                                     ')'[)]
-                                                                                     
                                                                                 ]
                                                                         ]
                                                                ]
@@ -558,20 +558,22 @@ statements[I[NEWLINE[NEWLINE]
                                                                                      
                                                                                      ')'[)]
                                                                                      
-                                                                                     I[NEWLINE[NEWLINE]
-                                                                                       
-                                                                                     ]
-                                                                                     LambdaDef['{'[{]
-                                                                                               
-                                                                                               statements[
-                                                                                               ]
-                                                                                               '}'[}]
-                                                                                               
-                                                                                     ]
                                                                                 ]
                                                                         ]
                                                                ]
                                                 ]
+                                ]
+                     ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[expression[LambdaDef['{'[{]
+                                          
+                                          statements[
+                                          ]
+                                          '}'[}]
+                                          
                                 ]
                      ]
                      EOL[;]
@@ -604,34 +606,36 @@ statements[I[NEWLINE[NEWLINE]
                                                                                      ]
                                                                                      ')'[)]
                                                                                      
-                                                                                     I[NEWLINE[NEWLINE]
-                                                                                       
-                                                                                     ]
-                                                                                     LambdaDef['{'[{]
-                                                                                               
-                                                                                               statements[I[NEWLINE[NEWLINE]
-                                                                                                            
-                                                                                                          ]
-                                                                                                          statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[print]
-                                                                                                                                                                                       
-                                                                                                                                                                            ]
-                                                                                                                                                                       ]
-                                                                                                                                                              ]
-                                                                                                                                               ]
-                                                                                                                               ]
-                                                                                                                    ]
-                                                                                                          ]
-                                                                                                          I[NEWLINE[NEWLINE]
-                                                                                                            
-                                                                                                          ]
-                                                                                               ]
-                                                                                               '}'[}]
-                                                                                               
-                                                                                     ]
                                                                                 ]
                                                                         ]
                                                                ]
                                                 ]
+                                ]
+                     ]
+           ]
+           I[NEWLINE[NEWLINE]
+             
+           ]
+           statement[expression[LambdaDef['{'[{]
+                                          
+                                          statements[I[NEWLINE[NEWLINE]
+                                                       
+                                                     ]
+                                                     statement[expression[BinaryOperation[UnaryOperation[AtomExpr[Atom[Identifier[simpleName[print]
+                                                                                                                                  
+                                                                                                                       ]
+                                                                                                                  ]
+                                                                                                         ]
+                                                                                          ]
+                                                                          ]
+                                                               ]
+                                                     ]
+                                                     I[NEWLINE[NEWLINE]
+                                                       
+                                                     ]
+                                          ]
+                                          '}'[}]
+                                          
                                 ]
                      ]
            ]

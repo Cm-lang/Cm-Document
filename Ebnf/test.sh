@@ -41,7 +41,8 @@ python testLang.py statements -o test/MultilineComments "
 */
 "
 python testLang.py statements -o test/Decl "
-let f : [i32=>i32]= (s:i32)=>i32->{s+2}
+let f : [i32=>i32] = (s:i32)=>i32->{s+2}
+var f : auto = (i:i32, inner:[i32 => i32])->{inner(i)};
 "
 python testLang.py statements -o test/Lambda "
 let f = s->{s+2};
