@@ -156,7 +156,7 @@ LambdaDef # Throw I
             |
             '{' [variableDeclarationEntryList [':' Type | '=>' Type] '->']
                 statements              # 若没有定义形式参数, 则类似kotlin的`it`或者scala的`_`
-            '}' [':' Type] Trailer*     
+            '}' [':' Type] Trailer*   
                 # 如果定义lambda后直接call它，感觉是强行单子。
                 # 所以把call直接放到lambda结构里。
             | [genericParameters] LambdaDef
