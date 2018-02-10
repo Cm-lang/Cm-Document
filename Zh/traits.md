@@ -19,7 +19,7 @@ struct File : Disposeable
   ...
 }
 
-let Dispose = { File& file ->
+let Dispose = { File& this ->
   //销毁文件实例
 }
 
@@ -28,7 +28,7 @@ let Dispose = { File& file ->
 可以为trait提供默认实现
 
 ```cm
-let Dispose = { Disposeable& disposeable ->
+let Dispose = { Disposeable& this ->
   panic("未实现的Disposeable");
 }
 
